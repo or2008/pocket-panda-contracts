@@ -1,0 +1,1 @@
+export const mnemonic = 'marriage roof tag share enlist matrix bundle clarify duck craft evoke course';
