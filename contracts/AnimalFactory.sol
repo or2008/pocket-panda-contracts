@@ -140,10 +140,10 @@ contract AnimalFactory is Ownable
     AnimalProperties  animalObject;
 
     //the number of animals limit
-    uint public totalAnimalsMax = 10000;
+    uint public totalAnimalsMax = 5000;
 
 	// Total free Animals created
-    uint256 public totalFreeAnimalsMax=1500;
+    uint256 public totalFreeAnimalsMax=0;
 
     //the number of free animals an address can claim
     uint public freeAnimalsLimit = 1;
@@ -291,7 +291,7 @@ contract AnimalFactory is Ownable
     /**
      * claim an animal from animal factory
      **/
-    function claimFreeAnimalFromAnimalFactory( string animalName, string animalDesc) public
+    function claimFreeAnimalFromAnimalFactory(string animalName, string animalDesc) public
     {
         require(msg.sender != 0x0);
         require (!isContractPaused);

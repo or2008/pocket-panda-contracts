@@ -1,1 +1,2 @@
-export const mnemonic = 'marriage roof tag share enlist matrix bundle clarify duck craft evoke course';
+export const mnemonic = 'marriage roof tag share enlist matrix bundle clarify duck craft evoke course'; // 0x8fC9809D2344AF25751A9Bd96e0dC1811852221b // 0xb8e79fd3aacf99625c975b7f7a3fc5141b6a22fe34afed9ac8d3b0ee41e877a1
+export const bscscanApiKey = 'XTE3E4VNTSQV5E6TSIJ7AXRK98ZFPP8S6T';

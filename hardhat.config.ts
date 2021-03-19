@@ -1,7 +1,11 @@
 import { HardhatUserConfig } from "hardhat/config";
 import { task } from "hardhat/config";
+
 import "@nomiclabs/hardhat-waffle";
-import { mnemonic } from './secrets';
+import "@nomiclabs/hardhat-ethers";
+import "@nomiclabs/hardhat-etherscan";
+
+import { mnemonic, bscscanApiKey } from './secrets';
 
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -38,6 +42,12 @@ const config: HardhatUserConfig = {
       accounts: { mnemonic: mnemonic }
     }
   },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://bscscan.com/
+    apiKey: bscscanApiKey
+  },
+
   solidity: {
     version: "0.4.23",
     settings: {
