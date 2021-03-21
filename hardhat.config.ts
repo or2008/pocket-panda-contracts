@@ -29,7 +29,9 @@ const config: HardhatUserConfig = {
       url: "http://127.0.0.1:8545"
     },
     hardhat: {
-
+      forking: {
+        url: 'https://bsc-dataseed.binance.org'
+      }
     },
     binanceTestnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
