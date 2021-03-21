@@ -1,6 +1,7 @@
 import { HardhatUserConfig } from "hardhat/config";
 import { task } from "hardhat/config";
 
+import '@typechain/hardhat'
 import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-etherscan";
@@ -28,14 +29,15 @@ const config: HardhatUserConfig = {
       url: "http://127.0.0.1:8545"
     },
     hardhat: {
+
     },
-    testnet: {
+    binanceTestnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
       chainId: 97,
       gasPrice: 20000000000,
       accounts: { mnemonic: mnemonic }
     },
-    mainnet: {
+    binanceMainnet: {
       url: "https://bsc-dataseed.binance.org/",
       chainId: 56,
       gasPrice: 20000000000,
@@ -56,12 +58,6 @@ const config: HardhatUserConfig = {
       }
     }
   },
-  // paths: {
-  //   sources: "./contracts",
-  //   tests: "./test",
-  //   cache: "./cache",
-  //   artifacts: "./artifacts"
-  // },
   mocha: {
     timeout: 20000
   }

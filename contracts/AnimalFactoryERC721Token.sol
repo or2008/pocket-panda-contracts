@@ -5,7 +5,6 @@
 /**
  *Submitted for verification at Etherscan.io on 2018-05-29
 */
-
 pragma solidity ^0.4.23;
 
 

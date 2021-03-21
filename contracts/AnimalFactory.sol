@@ -6,8 +6,6 @@
  *Submitted for verification at Etherscan.io on 2018-05-29
 */
 
-
-
 pragma solidity ^0.4.23;
 
 
@@ -345,8 +343,6 @@ contract AnimalFactory is Ownable
         require(validPurchase());
         require(msg.sender != 0x0);
 
-
-
 		//everyone except owner has to pay the advertisement fees
         if (msg.sender!=owner)
         {
@@ -357,15 +353,12 @@ contract AnimalFactory is Ownable
 
 		if (totalAnimalsCreated >= totalAnimalsMax) throw;
 
-
-
         uint gId=0;
         //owner can claim as many free animals as he or she wants
         if (msg.sender!=owner)
         {
             gId=1;
         }
-
 
         uint256 weiAmount = msg.value;
 
@@ -375,8 +368,8 @@ contract AnimalFactory is Ownable
         // update state
         weiRaised = weiRaised.add(weiAmount);
 
-
         uniqueAnimalId++;
+
         //Generating Animal Record
         animalObject = AnimalProperties({
             id:uniqueAnimalId,
@@ -398,14 +391,13 @@ contract AnimalFactory is Ownable
 
         });
 
-
         //transferring the token
         token.sendToken(msg.sender, uniqueAnimalId,animalName);
+
         emit AnimalsPurchased(msg.sender, owner, weiAmount, tokens);
 
         //updating the mappings to store animal records
         animalAgainstId[uniqueAnimalId]=animalObject;
-
 
         totalAnimalsCreated++;
 
